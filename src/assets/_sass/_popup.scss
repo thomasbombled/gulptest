@@ -1,0 +1,70 @@
+$navfont:'Sweet Sensations',
+Arial,
+Helvetica,
+Sans-serif;
+$yellow: #ffa800;
+$w: #fff;
+$blue: #a2cde2;
+$blueclair: #85b7ce;
+$fontb:'Futura Bold',
+Arial,
+Helvetica,
+Sans-serif;
+
+
+
+button.close {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    position: absolute;
+    -webkit-appearance: none;
+    right: 20px;
+}
+.modal-content {
+    background: #fff;
+}
+.modal-content * {
+    color: $blue;
+}
+ 
+.container {
+    @include mq('tablet-small', max) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+#myModalComment .modal-dialog {
+    max-width: 1140px;
+    margin: 30px auto;
+    @include mq('tablet-small', max) {
+        max-width: 94%;
+    }
+}
+
+#myModalComment .modal-content {
+    padding-bottom: 50px;
+    background: #fff;
+	
+	    color: $blue;
+	font-size:12px;
+	
+
+}
+
+#myModalComment .modal-dialog h2.modal-title,
+.modal-dialog .modal-title,
+#myModalComment .modal-dialog h2.modal-title b,
+#myModalComment .modal-header {
+    color: $blue;
+    border-bottom: none;
+    display: block;
+    width: 100%;
+    text-align: center;	
+	font-family: $fontb;
+	
+	font-size:16px;
+
+	
+}

@@ -1,0 +1,397 @@
+$font:'tt_blushes_thin_demoregular',
+Arial,
+Helvetica,
+Sans-serif;
+$fonts: Times,
+serif;
+$greenclair: #bcc602;
+a {
+    color: #000;
+}
+
+.sidebar {
+     @include mq('tablet', max) {
+        height: 100px !important;
+        position: fixed;
+         
+    overflow: visible;
+         z-index: 99
+    }
+    @include mq('tablet') {
+        min-height: 768px !important;
+        z-index: 99;
+    }
+}
+.navhidder,.navfixer {
+     @include mq('tablet', max) {
+        height: auto!important;
+       
+    }
+   
+}
+.sidebar.smally {
+  
+    @include mq('tablet') {
+          overflow: hidden;
+    }
+}
+
+.sidebar.smallyr:after {
+  top: 100%;
+  left: 48px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #fff;
+  border-width: 18px;
+  margin-left: -18px;
+}
+
+.navfixer {
+   
+    @include mq('tablet') {
+    height: 100%;
+        width: 100% ;
+    position: relative;
+     }
+}
+
+.smally .navfixer {
+   
+    @include mq('tablet') {
+       min-height: 768px !important;
+    }
+}
+
+.smally .navhidder {
+   
+    @include mq('tablet') {
+        height: auto;
+         width: 100%;
+     position: relative;
+    width: calc(100% + 40px);
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    }
+}
+
+.btn-delivroo {
+    display: inline-block;
+    height: 100px;
+    width: 106px;
+    margin-left: 10px;
+    background: url(../images/logo_delivroo.png) 50% 50% no-repeat;
+    @include mq('tablet', max) {
+        height: 50px;
+        width: 53px;
+        margin-left: 10px;
+        background: url(../images/logo_delivroo.png) 50% 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+.btn-glovo {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin-left: 0px;
+    background: url(../images/logo_glovo.jpg) 50% 50% no-repeat;
+    @include mq('tablet', max) {
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        background: url(../images/logo_glovo.jpg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+.btn-uber {
+    display: inline-block;
+    height: 100px;
+    width: 148px;
+    margin-left: 10px;
+    background: url(../images/logo_ubereats.jpg) 50% 50% no-repeat;
+    @include mq('tablet', max) {
+        height: 50px;
+        width: 74px;
+        margin-left: 10px;
+        background: url(../images/logo_ubereats.jpg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+.modal .modal-header h2 {
+    width: 100%;
+    color: $green;
+    font-size: 130%;
+}
+
+#modalml .modal-dialog {
+    max-width: 700px;
+}
+
+.sidebar .bg {
+    @include clearfix();
+    @include absolutelink();
+    position: relative;
+    z-index: 0;
+    @include mq('tablet', max) {
+        height: 100px;
+        background: #fff;
+    }
+    @include mq('tablet-wide') {
+       
+    }
+}
+
+.sidebar * {
+    z-index: 2;
+}
+
+#navbarCollapse {
+    @include mq('tablet', max) {
+        width: 100%;
+        position: fixed;
+        top: 100px;
+        background: #fff;
+        display: none;
+        z-index: 99999;
+    }
+    @include mq('tablet') {
+        display: block;
+    }
+}
+
+#navbarCollapse.show {
+    @include mq('tablet', max) {
+        display: block;
+    }
+}
+
+.nav-pills {
+    @include mq('tablet', max) {
+        padding: 0 35px 20px;
+    }
+    @include mq('tablet') {
+        padding: 0 30px;
+    }
+}
+
+.sidebar .navbar-toggler {
+    position: relative;
+    float: right;
+    margin: 30px 15px 0 0;
+    background: #fff;
+    width: 45px;
+    padding: 0.40rem 0.50rem 0;
+    border: 2px solid #416f31;
+    @include mq('tablet', max) {
+        display: block;
+    }
+    @include mq('tablet') {
+        display: none;
+    }
+}
+
+.sidebar .navbar-toggler .navbar-toggler-icon {
+    @include mq('tablet', max) {
+        background: #416f31;
+        height: 2px;
+        vertical-align: top;
+        display: list-item;
+        list-style: none;
+        margin-bottom: 6px;
+        width: 100%;
+    }
+}
+
+.nav-pills li {
+    padding: 0;
+    margin: 0 auto 10px;
+    width: 282px;
+    min-height: 30px;
+    @include mq('tablet', max) {
+        padding: 0;
+        margin: 0 auto 20px;
+        width: 100%;
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+a.nav-link {
+    color: #4d7129;
+    font: 152% $font;
+    padding: 0;
+    margin: 0;
+    @include mq('tablet', max) {
+        font: 100% $font;
+        padding: 0;
+    }
+}a.nav-link:hover {
+       color: #bcc602;
+}
+
+.nav_feuille a {
+    color: #4d7129;
+    font: 100% $font;
+    margin: 0;
+    height: 35px;
+    background: url(../images/ico_feuille.png) 0% 50% no-repeat;
+    background-size: contain;
+    width: 100%;
+    display: block;
+    @include mq('tablet') {
+        height: 25px;
+        line-height: 30px;
+        font: 80% $font;
+        padding: 0 0 0 40px;
+    }
+    @include mq('tablet', max) {
+        height: 25px;
+        line-height: 30px;
+        font: 100% $font;
+        padding: 0 0 0 40px;
+    }
+    @include mq('desktop') {
+        font: 100% $font;
+        margin: 0;
+        height: 35px;
+        line-height: 40px;
+        padding: 0px 0 0 50px;
+    }
+    @include mq('tablet', max) {
+        height: 25px;
+        line-height: 30px;
+        font: 80% $font;
+        padding: 5px 0 0 30px;
+        background: url(../images/ico_feuille.png) 0% 100% no-repeat;
+        background-size: 25px auto;
+    }
+}
+
+.nav-adresse {
+    margin: 0;
+}
+
+.sectionController.activated {
+ color: #bcc602;
+}
+
+.nav-adresse h3 {
+    font: 100% $font;
+    padding: 0;
+    @include mq('tablet', max) {
+        font: 100% $font;
+    }
+}
+
+.nav-adresse p {
+    font: 100% $font;
+    color: $green;
+    padding: 0 0px;
+    @include mq('tablet', max) {
+        font: 80% $font;
+    }
+    @include mq('tablet') {
+        font: 80% $font;
+    }
+}
+
+.logo {
+    @include mq('tablet', max) {
+        height: 80px;
+        width: 50%;
+        padding: 0;
+        margin: 10px 0 0 10px;
+        position: relative;
+        display: block;
+        float: left;
+    }
+    @include mq('tablet') {
+        width: 100%;
+        max-width: 175px;
+        ;
+        height: 183px;
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 20px auto 40px;
+    }
+    @include mq('tablet-wide') {
+        width: 100%;
+        max-width: 200px;
+        height: 183px;
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 20px auto 40px;
+    }
+    @include mq('desktop') {
+        width: 100%;
+        max-width: 282px;
+        height: 183px;
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 60px auto 50px;
+    }
+    z-index: z('logo');
+}
+
+.logo a {
+    @include absolutelink();
+    background: url(../images/logo_aplum_nav.png) 50% 50% no-repeat;
+    background-size: contain;
+    @include mq('tablet', max) {
+        background: url(../images/logo_aplum_nav.png) 20px 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: none;
+    @include mq('tablet') {
+        display: block;
+    }
+}
+.smally footer {
+
+    display: none;
+    @include mq('tablet') {
+position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: block;
+    margin-top: 70px;
+    display: block;
+    height: 50px;    }
+}
+
+footer p {
+    font: 80% $font;
+    color: $green;
+    line-height: 1.6;
+    @include mq('desktop', max) {
+        font: 70% $font;
+    }
+}
+
+footer a {
+    cursor: pointer;
+}
+
+a.nav-link.separator {
+    color: $greenclair;
+}
